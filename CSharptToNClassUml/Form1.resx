@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TSS.UniverseLogic
+{
+    static class StableRandom
+    {
+        public static Random rd = new Random();
+    }
+    public enum MoveDirection
+    {
+        stand,
+        up,
+        down,
+        left,
+        right
+    }
+    public enum FoodType
+    {
+        deadCell,
+        defaultFood
+    }
+    class Universe:IUniverse
+    {
+        UniverseObject[][] universeMatrix;
+        List&lt;Cell&gt; cellList = new List&lt;Cell&gt;(0);
+        int width, height;
+        long ticksCount ;
+        int blockCellDesc ;
+        Cell MostFitGenome_OneCell;
+        int MostFitGenome_CellsCount;
+
+        public Universe(int width, int height, int cellsStartCount)
+        {
+            this.width = width;
+            this.height = height;
+            universeMatrix = new UniverseObject[width][];
+            for (int i = 0; i &lt; width; i++)
+            {
+                universeMatrix[i] = new UniverseObject[height];
+            }
+
+            for (int i = 0; i &lt; width; i++)
+            {
+                for (int j = 0; j &lt; height; j++)
+                {
+                    AddUniverseObject(i, j, new UniverseObject(), false);
+                }
+            }
+            MostFitGenome_CellsCount = 0;
+            ticksCount = 0;
+            blockCellDesc = 0;
+            GenerateCells(cellsStartCount);
+        }
+
+        public void DoUniverseTick()
+        {
+            HandleAllCellsMoves();
+            GenerateFood(ConstsUniverse.Special_FoodCountForTick);
+            CheckAllCells();
+            CalcMostFitCell();
+
+            if (GetCellsCount() == 0)
+                GenerateCells(1);
+
+            ticksCount++;
+        }
+
+        public int GetHeight()
+        {
+            return height;
+        }
+
+        public int GetWidth()
+        {
+            return width;
+        }
+
+        public int GetObjectDescriptor(int x, int y)
+        {
+            if (ValidateCords(x, y))
+                return universeMatrix[x][y].GetDesc();
+            return 0;
+        }
+
+        public int[][] GetAllDescriptors()
+        {
+            int[][] descriptors = new int[width][];
+            for (int i = 0; i &lt; width; i++)
+            {
+                descriptors[i] = new int[height];
+                for (int j = 0; j &lt; height; j++)
+                {
+                    descriptors[i][j] = universeMatrix[i][j].GetDesc();
+                }
+            }
+            return descriptors;
+        }
+
+        public int GetCellsCount()
+        {
+            return cellList.Count;
+        }
+
+        public long GetTicksCount()
+        {
+            return ticksCount;
+        }
+
+        public Tuple&lt;Cell, int&gt; GetMostFit()
+        {
+            return Tuple.Create&lt;Cell, int&gt;(
+                MostFitGenome_OneCell,
+                MostFitGenome_CellsCount
+                );
+        }
+
+        bool ValidateCords(int x, int y)
+        {
+            return (x &gt;= 0 &amp;&amp; y &gt;= 0 &amp;&amp; x &lt; width &amp;&amp; y &lt; height);
+        }
+
+        void SetMatrixElement(int x, int y, UniverseObject universeObject)
+        {
+            universeMatrix[x][y] = universeObject;
+            universeObject.SetCords(x, y);
+        }
+
+        bool AddUniverseObject(int x, int y, UniverseObject universeObject, bool canReSetPrevObject)
+        {
+            if (universeMatrix[x][y] == null)
+            {
+                SetMatrixElement(x, y, universeObject);
+                universeObject.SetUniverse(this);
+                return true;
+            }
+            else if (canReSetPrevObject || universeMatrix[x][y].isDisposed())
+            {
+                universeMatrix[x][y].Dispose();
+                SetMatrixElement(x, y, universeObject);
+                universeObject.SetUniverse(this);
+                return true;
+            }
+            return false;
+        }
+
+        void RelocateUniverseObject(int x1, int y1, int x2, int y2)
+        {
+            SetMatrixElement(x2, y2, universeMatrix[x1][y1]);
+            SetMatrixElement(x1, y1, new UniverseObject());
+        }
+
+        void GenerateCells(int count)
+        {
+            if (cellList.Count &gt; 0)
+            {
+                foreach(Cell cell in cellList.ToArray())
+                    KillCell(cell.GetX(), cell.GetY());
+            }
+            List&lt;Cell&gt; bufCellList = new List&lt;Cell&gt;(0);
+            for (int i = 0; i &lt; count; i++)
+            {
+
+                int x = StableRandom.rd.Next(width);
+                int y = StableRandom.rd.Next(height);
+                Cell cell = new Cell(new Genome());
+                if (AddUniverseObject(x, y, cell, false))
+                    bufCellList.Add(cell);
+            }
+            cellList = bufCellList;
+        }
+
+        void GenerateFood(int count)
+        {
+            for (int i = 0; i &lt; count; i++)
+            {
+                int x = StableRandom.rd.Next(0, width);
+                int y = StableRandom.rd.Next(0, height);
+                AddUniverseObject(x, y, new Food(FoodType.defaultFood), false);
+            }
+        }
+
+        void KillCell(int x, int y)
+        {
+            if(universeMatrix[x][y] is Cell)
+            {
+                AddUniverseObject(x, y, new Food(FoodType.deadCell), true);
+            }
+        }
+
+        void HandleCellMove(Cell cell)
+        {
+            int x1=cell.GetX(), y1=cell.GetY(), x2, y2;
+            MoveDirection md = cell.CalcMoveDirectionAspiration();
+            switch (md)
+            {
+                case MoveDirection.up:
+                    x2 = x1; y2 = y1 - 1;
+                    break;
+                case MoveDirection.down:
+                    x2 = x1; y2 = y1 + 1;
+                    break;
+                case MoveDirection.left:
+                    x2 = x1-1; y2 = y1;
+                    break;
+                case MoveDirection.right:
+                    x2 = x1+1; y2 = y1;
+                    break;
+                default:
+                    return;
+            }
+
+            if (!ValidateCords(x2, y2))
+                return;
+
+            if (universeMatrix[x2][y2].isDisposed())
+            {
+                RelocateUniverseObject(x1, y1, x2, y2);
+            }
+            else if (universeMatrix[x2][y2] is Food)
+            {
+                cell.AddEnergy((universeMatrix[x2][y2] as Food).GetEnergyLevel());
+                RelocateUniverseObject(x1, y1, x2, y2);
+            }
+            else if (universeMatrix[x1][y1].GetDesc() == universeMatrix[x2][y2].GetDesc())
+            {
+                cell.AddEnergy(ConstsUniverse.EnergyLevel_MovesFriendly);
+                (universeMatrix[x2][y2] as Cell).AddEnergy(ConstsUniverse.EnergyLevel_MovesFriendly);
+            }
+            else
+            {
+                cell.AddEnergy((float)(ConstsUniverse.EnergyLevel_MovesAggression*0.8));
+                (universeMatrix[x2][y2] as Cell).AddEnergy(-ConstsUniverse.EnergyLevel_MovesAggression);
+            }
+
+        }
+
+        void HandleAllCellsMoves()
+        {
+            foreach (Cell cell in cellList)
+            {
+                HandleCellMove(cell);
+            }
+        }
+
+        void CheckAllCells()
+        {
+            bool notUniverseOverflow = cellList.Count &lt;= ConstsUniverse.CellsCount_MaxAtField;
+            List&lt;Cell&gt; bufCellList = new List&lt;Cell&gt;(0);
+
+            for(int i=0; i&lt;cellList.Count; i++)
+            {
+                if (cellList[i].isDisposed())
+                    continue;         
+                if (cellList[i].IncAge() || cellList[i].DecEnergy())
+                {
+                    KillCell(cellList[i].GetX(), cellList[i].GetY());
+                    continue;
+                }
+                else
+                    bufCellList.Add(cellList[i]);
+
+                if (notUniverseOverflow &amp;&amp; cellList[i].CalcReproduction() &amp;&amp; cellList[i].GetDesc()!=blockCellDesc)
+                {
+                    List&lt;MoveDirection&gt; md = new List&lt;MoveDirection&gt;(0);
+                    int x = cellList[i].GetX();
+                    int y = cellList[i].GetY();
+                    if (ValidateCords(x,y-1) &amp;&amp; universeMatrix[x][y-1].GetDesc()&lt;100)
+                        md.Add(MoveDirection.up);
+                    if (ValidateCords(x, y + 1) &amp;&amp; universeMatrix[x][y + 1].GetDesc() &lt; 100)
+                        md.Add(MoveDirection.down);
+                    if (ValidateCords(x-1, y ) &amp;&amp; universeMatrix[x - 1][y].GetDesc() &lt; 100)
+                        md.Add(MoveDirection.left);
+                    if (ValidateCords(x+1, y ) &amp;&amp; universeMatrix[x + 1][y].GetDesc() &lt; 100)
+                        md.Add(MoveDirection.right);
+
+
+                    MoveDirection choice = MoveDirection.stand;
+                    if (md.Count&gt;0)
+                        choice = md[StableRandom.rd.Next(md.Count)];
+
+                    if (choice == MoveDirection.stand)
+                        continue;
+
+                    Cell newCell = cellList[i].Reproduct();
+                    switch (choice)
+                    {
+                        case MoveDirection.up:
+                            AddUniverseObject(x, y - 1, newCell, true);
+                            break;
+                        case MoveDirection.down:
+                            AddUniverseObject(x, y + 1, newCell, true);
+                            break;
+                        case MoveDirection.left:
+                            AddUniverseObject(x - 1, y, newCell, true);
+                            break;
+                        case MoveDirection.right:
+                            AddUniverseObject(x+1, y, newCell, true);
+                            break;
+
+                    }
+                    bufCellList.Add(newCell);
+                }
+            }
+
+            List&lt;Cell&gt; bufCellList2;
+            if (ticksCount % 11 == 0)
+            {
+                bufCellList2 = new List&lt;Cell&gt;(0);
+                while (bufCellList.Count &gt; 0)
+                {
+                    int index = StableRandom.rd.Next(bufCellList.Count);
+                    bufCellList2.Add(bufCellList[index]);
+                    bufCellList.RemoveAt(index);
+                }
+            }
+            else
+                bufCellList2 = bufCellList;
+
+
+            cellList =bufCellList2;
+        }
+
+        void CalcMostFitCell()
+        {
+            List&lt;int&gt; descriptors = GetCellsDescriptors();
+            if (descriptors.Count &lt;= 0)
+                return;
+
+            descriptors.Sort();
+
+            List&lt;int&gt; uniqDescs = new List&lt;int&gt;(0);
+            List&lt;int&gt; uniqDescsRepeats = new List&lt;int&gt;(0);
+            uniqDescs.Add(descriptors[0]);
+            uniqDescsRepeats.Add(1);
+            int index = 0;
+            for (int i = 1; i &lt; descriptors.Count; i++)
+            {
+                if (descriptors[i] == uniqDescs[index])
+                {
+                    uniqDescsRepeats[index]++;
+                }
+                else
+                {
+                    uniqDescs.Add(descriptors[i]);
+                    uniqDescsRepeats.Add(1);
+                    index++;
+                }
+            }
+            int highIndex = 0, highValue = uniqDescsRepeats[0];
+            for (int i = 1; i &lt; uniqDescs.Count; i++)
+            {
+                if (uniqDescsRepeats[i] &gt; highValue)
+                {
+                    highValue = uniqDescsRepeats[i];
+                    highIndex = i;
+                }
+            }
+
+            if (highValue &gt; ConstsUniverse.CellsCount_MaxWithOneType)
+                blockCellDesc = uniqDescs[highIndex];
+            else
+                blockCellDesc = 0;
+
+            MostFitGenome_OneCell = FindCellByDesc(uniqDescs[highIndex]);
+            MostFitGenome_CellsCount = highValue;
+
+        }
+
+        Cell FindCellByDesc(int descriptor)
+        {
+            if (cellList.Count &gt; 0)
+            {
+                for (int i = 0; i &lt; cellList.Count; i++)
+                {
+                    if (cellList[i].GetDesc() == descriptor)
+                        return cellList[i];
+                }
+                return cellList[0];
+            }
+            return null;
+        }
+
+        List&lt;int&gt; GetCellsDescriptors()
+        {
+            List&lt;int&gt; descriptors = new List&lt;int&gt;(0);
+            for(int i = 0; i &lt; cellList.Count; i++)
+            {
+                descriptors.Add(cellList[i].GetDesc());
+            }
+            return descriptors;
+        }    
+    }
+}</value>
+  </data>
+</root>
